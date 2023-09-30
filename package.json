@@ -9,7 +9,8 @@
         "eslint": "^8.50.0",
         "husky": "^8.0.3",
         "prettier": "^3.0.3",
-        "typescript": "^5.2.2"
+        "typescript": "^5.2.2",
+        "zod": "^3.22.2"
     },
     "scripts": {
         "start": "bun run src/index.ts",
