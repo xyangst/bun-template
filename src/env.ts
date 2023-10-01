@@ -7,16 +7,9 @@ const envSchema = z.object({
 });
 
 const res = envSchema.safeParse(process.env);
-if (res.success) {
-    process.env = res.data;
-} else {
+if (!res.success) {
     const err = JSON.stringify(res.error.flatten().fieldErrors);
     throw new Error(err);
 }
-
-//you can access the typed env variables by Bun.env or process.env
-declare global {
-    namespace NodeJS {
-        interface ProcessEnv extends z.infer<typeof envSchema> {}
-    }
-}
+//you can access the typed env variables on this object
+export const env = res.data;
