@@ -1,2 +1,2 @@
-import('env');
-console.log('Hello via Bun!');
+import("env");
+console.log("Hello via Bun!");

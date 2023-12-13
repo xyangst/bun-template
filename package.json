@@ -1,33 +1,18 @@
 {
-    "name": "bun-template",
-    "module": "src/index.ts",
-    "type": "module",
-    "devDependencies": {
-        "@typescript-eslint/eslint-plugin": "^6.7.3",
-        "@typescript-eslint/parser": "^6.7.3",
-        "bun-types": "latest",
-        "eslint": "^8.50.0",
-        "husky": "^8.0.3",
-        "prettier": "^3.0.3",
-        "typescript": "^5.2.2",
-        "zod": "^3.22.2"
-    },
-    "scripts": {
-        "start": "bun run src/index.ts",
-        "dev": "bun run --watch src/index.ts",
-        "lint": "eslint src --ext ts --fix",
-        "format": "prettier --write src",
-        "make": "bun build ./src/index.ts --compile --outfile dist/binary"
-    },
-    "husky": {
-        "hooks": {
-            "pre-commit": "lint-staged"
-        }
-    },
-    "lint-staged": {
-        "src/**/*.ts": [
-            "eslint --fix",
-            "prettier --write"
-        ]
-    }
+	"name": "bun-template",
+	"module": "src/index.ts",
+	"type": "module",
+	"devDependencies": {
+		"@biomejs/biome": "^1.4.1",
+		"bun-types": "latest",
+		"typescript": "^5.2.2",
+		"zod": "^3.22.2"
+	},
+	"scripts": {
+		"start": "bun run src/index.ts",
+		"dev": "bun run --watch src/index.ts",
+		"lint": "biome lint . --apply",
+		"format": "biome format . --write",
+		"make": "bun build ./src/index.ts --compile --outfile dist/binary"
+	}
 }
