@@ -1,18 +1,18 @@
 {
-  "name": "bun-template",
-  "module": "src/index.ts",
-  "type": "module",
-  "devDependencies": {
-    "@biomejs/biome": "^1.4.1",
-    "bun-types": "latest",
-    "typescript": "^5.2.2",
-    "zod": "^3.22.2"
-  },
-  "scripts": {
-    "start": "bun run src/index.ts",
-    "dev": "bun run --watch src/index.ts",
-    "lint": "biome lint . --apply",
-    "format": "biome format . --write",
-    "make": "bun build ./src/index.ts --compile --outfile dist/binary"
-  }
+	"name": "bun-template",
+	"module": "src/index.ts",
+	"type": "module",
+	"devDependencies": {
+		"@biomejs/biome": "^1.4.1",
+		"bun-types": "latest",
+		"typescript": "^5.2.2",
+		"zod": "^3.22.2"
+	},
+	"scripts": {
+		"start": "bun src/index.ts",
+		"dev": "bun --watch src/index.ts",
+		"lint": "biome lint . --apply",
+		"fmt": "biome format . --write",
+		"make": "bun build ./src/index.ts --compile --outfile dist/binary"
+	}
 }
