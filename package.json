@@ -12,7 +12,6 @@
 		"start": "bun src/index.ts",
 		"dev": "bun --watch src/index.ts",
 		"lint": "biome lint . --apply",
-		"fmt": "biome format . --write",
-		"make": "bun build ./src/index.ts --compile --outfile dist/binary"
+		"fmt": "biome format . --write"
 	}
 }
