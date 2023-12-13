@@ -1,0 +1,35 @@
+{
+	"$schema": "https://biomejs.dev/schemas/1.4.1/schema.json",
+	"organizeImports": {
+		"enabled": true
+	},
+	"vcs": {
+		"enabled": true,
+		"clientKind": "git",
+		"useIgnoreFile": true
+	},
+	"formatter": {
+		"indentWidth": 4
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"recommended": true,
+			"nursery": {
+				"recommended": true
+			},
+			"style": {
+				"noNonNullAssertion": "warn",
+				"noUnusedTemplateLiteral": "off"
+			},
+			"complexity": {
+				"noForEach": "off",
+				"noStaticOnlyClass": "off"
+			},
+			"suspicious": {
+				"noDoubleEquals": "off",
+				"noGlobalIsNan": "off"
+			}
+		}
+	}
+}
